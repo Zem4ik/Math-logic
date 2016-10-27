@@ -5,4 +5,4 @@ input file name: input.in
 
 output file name: output.out
 
-Wile writting program used runtime environment Node.js
+While writting program Node.js was used as a runtime environment
