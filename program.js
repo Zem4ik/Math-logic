@@ -143,7 +143,6 @@ var trees = [];
 var allMap = {};
 var rightMap = {};
 var hypothesisMap = {};
-var errorMap = {};
 
 var fs = require('fs');
 var contents = fs.readFileSync('input.in', 'utf8');
@@ -178,15 +177,9 @@ for (var i = 0; i < strings.length; ++i) {
 function modusPonens(k) {
     for (j in rightMap[trees[k].string]) {
         var index = rightMap[trees[k].string][j];
-        if (errorMap[index] === true) {
-            continue;
-        }
         if (parseInt(index) < parseInt(k)) {
             var leftTree = trees[index].left;
             if (allMap[leftTree.string] !== undefined && parseInt(allMap[leftTree.string]) < parseInt(k)) {
-                if (errorMap[allMap[leftTree.string]] === true) {
-                    continue;
-                }
                 return {
                     i: parseInt(allMap[leftTree.string]) + 1,
                     j: parseInt(index) + 1
@@ -217,7 +210,6 @@ for (m in trees) {
         continue;
     }
     outString += '(Не Доказано)\n';
-    errorMap[m] = true;
 }
 
 fs.writeFileSync('output.out', outString);
