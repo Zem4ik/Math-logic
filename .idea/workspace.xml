@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12bb96da-cd45-469c-a364-de42718c95c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3 hw/magicFile.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3 hw/program.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/input.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/program.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/program.js" afterPath="$PROJECT_DIR$/1 hw/program.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3 hw/proofs/info.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3 hw/proofs/proof1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3 hw/proofs/proof2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3 hw/proofs/proof3.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2 hw/output2.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2 hw/input.txt" afterPath="$PROJECT_DIR$/2 hw/input.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2 hw/output.txt" afterPath="$PROJECT_DIR$/2 hw/output.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2 hw/program.js" afterPath="$PROJECT_DIR$/2 hw/program.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,39 +24,75 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5638889">
+    <splitter split-orientation="horizontal" split-proportion="0.60221285">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="correct2.in" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/hw2/correct2.in">
+          <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/2 hw/input.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+                <state relative-caret-position="1003">
+                  <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="program.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/hw2/program.js">
+          <file leaf-file-name="info.txt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/3 hw/proofs/info.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+                <state relative-caret-position="119">
+                  <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="proof1.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof1.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="proof2.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof2.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="578">
+                  <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="proof3.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof3.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="program.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/2 hw/program.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="779">
+                  <caret line="641" column="32" lean-forward="false" selection-start-line="641" selection-start-column="32" selection-end-line="641" selection-end-column="32" />
                   <folding>
                     <element signature="e#14#55#0" expanded="false" />
                     <element signature="n#!!block;n#println#0" expanded="false" />
                     <element signature="n#!!block;n#split#0" expanded="false" />
-                    <element signature="n#Vertex#0" expanded="false" />
+                    <element signature="e#474#1306#0" expanded="false" />
+                    <element signature="e#484#1161#0" expanded="false" />
+                    <element signature="e#1204#1300#0" expanded="false" />
                     <element signature="e#2222#2478#0" expanded="false" />
                     <element signature="e#2341#2420#0" expanded="false" />
                     <element signature="n#!!block;n#putInBrackets#0;n#Vertex#0" expanded="false" />
                     <element signature="n#ConstructionParser#0" expanded="false" />
-                    <element signature="n#!!block;n#parseBinary#0;n#ConstructionParser#0" expanded="false" />
-                    <element signature="e#3061#3997#0" expanded="false" />
-                    <element signature="e#3156#3987#0" expanded="false" />
-                    <element signature="e#3208#3283#0" expanded="false" />
-                    <element signature="e#3300#3973#0" expanded="false" />
-                    <element signature="e#3669#3933#0" expanded="false" />
                     <element signature="e#4003#4953#0" expanded="false" />
                     <element signature="e#4117#4943#0" expanded="false" />
                     <element signature="e#4148#4223#0" expanded="false" />
@@ -64,15 +100,28 @@
                     <element signature="e#4617#4889#0" expanded="false" />
                     <element signature="n#!!block;n#parseConjunction#0;n#ConstructionParser#0" expanded="false" />
                     <element signature="n#!!block;n#parseDisjunction#0;n#ConstructionParser#0" expanded="false" />
-                    <element signature="n#!!block;n#parseExpression#0;n#ConstructionParser#0" expanded="false" />
                     <element signature="n#!!block;n#parseUnary#0;n#ConstructionParser#0" expanded="false" />
+                    <element signature="e#5695#5773#0" expanded="false" />
+                    <element signature="e#5788#5799#0" expanded="false" />
+                    <element signature="e#5808#6709#0" expanded="false" />
+                    <element signature="e#6334#6535#0" expanded="false" />
+                    <element signature="e#6434#6457#0" expanded="false" />
                     <element signature="n#!!block;n#parseVariable#0;n#ConstructionParser#0" expanded="false" />
                     <element signature="e#6797#7067#0" expanded="false" />
                     <element signature="e#6903#6918#0" expanded="false" />
                     <element signature="e#6961#7057#0" expanded="false" />
                     <element signature="n#!!block;n#parsePredicate#0;n#ConstructionParser#0" expanded="false" />
+                    <element signature="e#7261#7925#0" expanded="false" />
                     <element signature="e#7367#7382#0" expanded="false" />
                     <element signature="e#7425#7522#0" expanded="false" />
+                    <element signature="e#7666#7915#0" expanded="false" />
+                    <element signature="n#!!block;n#parseTerm#0;n#ConstructionParser#0" expanded="false" />
+                    <element signature="n#!!block;n#parseAdd#0;n#ConstructionParser#0" expanded="false" />
+                    <element signature="n#!!block;n#parseMultiply#0;n#ConstructionParser#0" expanded="false" />
+                    <element signature="e#8596#9262#0" expanded="false" />
+                    <element signature="e#8702#8717#0" expanded="false" />
+                    <element signature="e#8760#8856#0" expanded="false" />
+                    <element signature="e#9000#9252#0" expanded="false" />
                     <element signature="e#9346#9456#0" expanded="false" />
                     <element signature="e#9514#9663#0" expanded="false" />
                     <element signature="e#9697#9774#0" expanded="false" />
@@ -85,20 +134,35 @@
                     <element signature="e#12331#12675#0" expanded="false" />
                     <element signature="e#12432#12495#0" expanded="false" />
                     <element signature="e#12510#12628#0" expanded="false" />
+                    <element signature="n#!!block;n#checkExpression#0;n#Checker#0" expanded="false" />
+                    <element signature="e#12784#12931#0" expanded="false" />
+                    <element signature="e#12989#13141#0" expanded="false" />
                     <element signature="e#13698#13942#0" expanded="false" />
                     <element signature="n#!!block;n#modusPonens#0;n#Checker#0" expanded="false" />
                     <element signature="e#14380#14927#0" expanded="false" />
                     <element signature="e#14504#14917#0" expanded="false" />
                     <element signature="e#14709#14903#0" expanded="false" />
                     <element signature="e#14738#14885#0" expanded="false" />
+                    <element signature="n#!!block;n#universalQuantifierRule#0;n#Checker#0" expanded="false" />
+                    <element signature="e#15572#15609#0" expanded="false" />
+                    <element signature="e#15615#15682#0" expanded="false" />
+                    <element signature="n#!!block;n#existentialQuantifierRule#0;n#Checker#0" expanded="false" />
                     <element signature="e#16307#16344#0" expanded="false" />
                     <element signature="e#16350#16417#0" expanded="false" />
                     <element signature="n#!!block;n#compareTrees#0;n#Checker#0" expanded="false" />
                     <element signature="e#16623#16816#0" expanded="false" />
                     <element signature="e#16967#17058#0" expanded="false" />
                     <element signature="e#17099#17193#0" expanded="false" />
+                    <element signature="n#!!block;n#checkAxiom_11#0;n#Checker#0" expanded="false" />
                     <element signature="n#!!block;n#checkAxiom_12#0;n#Checker#0" expanded="false" />
-                    <element signature="n#!!block;n#checkAxiom_A9#0;n#Checker#0" expanded="false" />
+                    <element signature="n#!!block;n#checkSubstitution#0;n#Checker#0" expanded="false" />
+                    <element signature="e#18856#18946#0" expanded="false" />
+                    <element signature="e#18961#18998#0" expanded="false" />
+                    <element signature="n#!!block;n#substitution#0;n#Checker#0" expanded="false" />
+                    <element signature="e#19604#19762#0" expanded="false" />
+                    <element signature="e#19657#19701#0" expanded="false" />
+                    <element signature="e#19707#19752#0" expanded="false" />
+                    <element signature="e#19840#19879#0" expanded="false" />
                     <element signature="e#19995#20082#0" expanded="false" />
                     <element signature="e#20119#20209#0" expanded="false" />
                     <element signature="e#20246#20681#0" expanded="false" />
@@ -107,6 +171,10 @@
                     <element signature="e#20540#20600#0" expanded="false" />
                     <element signature="e#20767#20869#0" expanded="false" />
                     <element signature="e#20815#20859#0" expanded="false" />
+                    <element signature="n#!!block;n#checkIfBecameBounded#0;n#Checker#0" expanded="false" />
+                    <element signature="e#21092#21128#0" expanded="false" />
+                    <element signature="e#21206#21405#0" expanded="false" />
+                    <element signature="e#21249#21370#0" expanded="false" />
                     <element signature="e#21411#22425#0" expanded="false" />
                     <element signature="e#21584#21648#0" expanded="false" />
                     <element signature="e#21688#21820#0" expanded="false" />
@@ -115,31 +183,20 @@
                     <element signature="e#22101#22249#0" expanded="false" />
                     <element signature="e#22326#22390#0" expanded="false" />
                     <element signature="n#!!block;n#findFreeVariables#0;n#Checker#0" expanded="false" />
-                    <element signature="n#!!block;n#findBoundVariables#0;n#Checker#0" expanded="false" />
                     <element signature="n#!!block;n#checkForVariables#0;n#Checker#0" expanded="false" />
-                    <element signature="e#23712#23823#0" expanded="false" />
-                    <element signature="n#!!block;n#start#0" expanded="false" />
+                    <element signature="e#23415#23470#0" expanded="false" />
+                    <element signature="e#23505#23604#0" expanded="false" />
+                    <element signature="e#23640#23740#0" expanded="false" />
+                    <element signature="e#23776#23957#0" expanded="false" />
+                    <element signature="e#23836#23947#0" expanded="false" />
+                    <element signature="e#24001#24059#0" expanded="false" />
+                    <element signature="e#24108#24170#0" expanded="false" />
+                    <element signature="e#24227#24282#0" expanded="false" />
+                    <element signature="e#24600#25027#0" expanded="false" />
+                    <element signature="e#24883#24950#0" expanded="false" />
+                    <element signature="e#25033#25093#0" expanded="false" />
+                    <element signature="e#25513#25583#0" expanded="false" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="incorrect1.in" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/hw2/incorrect1.in">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/hw2/input.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -147,12 +204,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="output.txt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/hw2/output.txt">
+            <entry file="file://$PROJECT_DIR$/2 hw/output.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="779">
-                  <caret line="366" column="0" lean-forward="false" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
+                <state relative-caret-position="357">
+                  <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -192,6 +249,10 @@
       <find>println</find>
       <find>processingTime</find>
       <find>Правило выводы</find>
+      <find>(a*a+a+a')=(a+a+0'+a*a)-&gt;(a'*a')=(a+a+0'+a*a))</find>
+      <find>a*a+a+a'=a+a'+a*a</find>
+      <find>a*a+a+a'</find>
+      <find>entries</find>
     </findStrings>
     <replaceStrings>
       <replace>b</replace>
@@ -201,6 +262,8 @@
       <replace>inputString</replace>
       <replace>inputTree</replace>
       <replace>r</replace>
+      <replace>(a*a+(a+a')=a+a'+a*a)</replace>
+      <replace>a*a+(a+a')</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -222,6 +285,14 @@
         <option value="$PROJECT_DIR$/hw2/correct2.in" />
         <option value="$PROJECT_DIR$/hw2/input.txt" />
         <option value="$PROJECT_DIR$/hw2/program.js" />
+        <option value="$PROJECT_DIR$/2 hw/incorrect1.in" />
+        <option value="$PROJECT_DIR$/3 hw/proofs/proof2.txt" />
+        <option value="$PROJECT_DIR$/3 hw/proofs/proof3.txt" />
+        <option value="$PROJECT_DIR$/3 hw/proofs/proof1.txt" />
+        <option value="$PROJECT_DIR$/3 hw/proofs/info.txt" />
+        <option value="$PROJECT_DIR$/2 hw/output.txt" />
+        <option value="$PROJECT_DIR$/2 hw/input.txt" />
+        <option value="$PROJECT_DIR$/2 hw/program.js" />
       </list>
     </option>
   </component>
@@ -243,7 +314,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -279,6 +350,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -288,20 +360,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Math-logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Math-logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Math-logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hw2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,6 +387,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="3 hw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proofs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Math-logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Math-logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="1 hw" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -336,7 +412,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,10 +445,10 @@
     <configuration default="false" name="program.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="program.js" working-dir="$PROJECT_DIR$/3 hw">
       <method />
     </configuration>
-    <configuration default="false" name="pr.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="pr.js" working-dir="$PROJECT_DIR$/hw2">
+    <configuration default="false" name="pr.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="pr.js" working-dir="$PROJECT_DIR$/2 hw">
       <method />
     </configuration>
-    <configuration default="false" name="hw2" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="program.js" working-dir="$PROJECT_DIR$/hw2">
+    <configuration default="false" name="hw2" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/2 hw/program.js" working-dir="$PROJECT_DIR$/2 hw">
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
           <list />
@@ -488,25 +563,27 @@
       <updated>1497295291702</updated>
       <workItem from="1497295293078" duration="7062000" />
       <workItem from="1497346756982" duration="27051000" />
-      <workItem from="1497377908578" duration="33789000" />
+      <workItem from="1497377908578" duration="33857000" />
+      <workItem from="1497438820047" duration="5986000" />
+      <workItem from="1497603849570" duration="731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67902000" />
+    <option name="totallyTimeSpent" value="74687000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2528978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2528978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22210184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -523,15 +600,15 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21670191" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22210184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2528978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,11 +619,333 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="144" />
+      <option name="time" value="153" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/2 hw/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3 hw/proofs/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/program.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="641" column="32" lean-forward="false" selection-start-line="641" selection-start-column="32" selection-end-line="641" selection-end-column="32" />
+          <folding>
+            <element signature="e#14#55#0" expanded="false" />
+            <element signature="n#!!block;n#println#0" expanded="false" />
+            <element signature="n#!!block;n#split#0" expanded="false" />
+            <element signature="e#474#1306#0" expanded="false" />
+            <element signature="e#484#1161#0" expanded="false" />
+            <element signature="e#1204#1300#0" expanded="false" />
+            <element signature="e#2222#2478#0" expanded="false" />
+            <element signature="e#2341#2420#0" expanded="false" />
+            <element signature="n#!!block;n#putInBrackets#0;n#Vertex#0" expanded="false" />
+            <element signature="n#ConstructionParser#0" expanded="false" />
+            <element signature="e#4003#4953#0" expanded="false" />
+            <element signature="e#4117#4943#0" expanded="false" />
+            <element signature="e#4148#4223#0" expanded="false" />
+            <element signature="e#4240#4929#0" expanded="false" />
+            <element signature="e#4617#4889#0" expanded="false" />
+            <element signature="n#!!block;n#parseConjunction#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseDisjunction#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseUnary#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#5695#5773#0" expanded="false" />
+            <element signature="e#5788#5799#0" expanded="false" />
+            <element signature="e#5808#6709#0" expanded="false" />
+            <element signature="e#6334#6535#0" expanded="false" />
+            <element signature="e#6434#6457#0" expanded="false" />
+            <element signature="n#!!block;n#parseVariable#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#6797#7067#0" expanded="false" />
+            <element signature="e#6903#6918#0" expanded="false" />
+            <element signature="e#6961#7057#0" expanded="false" />
+            <element signature="n#!!block;n#parsePredicate#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#7261#7925#0" expanded="false" />
+            <element signature="e#7367#7382#0" expanded="false" />
+            <element signature="e#7425#7522#0" expanded="false" />
+            <element signature="e#7666#7915#0" expanded="false" />
+            <element signature="n#!!block;n#parseTerm#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseAdd#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseMultiply#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#8596#9262#0" expanded="false" />
+            <element signature="e#8702#8717#0" expanded="false" />
+            <element signature="e#8760#8856#0" expanded="false" />
+            <element signature="e#9000#9252#0" expanded="false" />
+            <element signature="e#9346#9456#0" expanded="false" />
+            <element signature="e#9514#9663#0" expanded="false" />
+            <element signature="e#9697#9774#0" expanded="false" />
+            <element signature="n#!!block;n#constructor#0;n#Checker#0" expanded="false" />
+            <element signature="e#10795#11039#0" expanded="false" />
+            <element signature="e#10873#10959#0" expanded="false" />
+            <element signature="e#11193#11702#0" expanded="false" />
+            <element signature="e#11801#12188#0" expanded="false" />
+            <element signature="n#!!block;n#checkAll#0;n#Checker#0" expanded="false" />
+            <element signature="e#12331#12675#0" expanded="false" />
+            <element signature="e#12432#12495#0" expanded="false" />
+            <element signature="e#12510#12628#0" expanded="false" />
+            <element signature="n#!!block;n#checkExpression#0;n#Checker#0" expanded="false" />
+            <element signature="e#12784#12931#0" expanded="false" />
+            <element signature="e#12989#13141#0" expanded="false" />
+            <element signature="e#13698#13942#0" expanded="false" />
+            <element signature="n#!!block;n#modusPonens#0;n#Checker#0" expanded="false" />
+            <element signature="e#14380#14927#0" expanded="false" />
+            <element signature="e#14504#14917#0" expanded="false" />
+            <element signature="e#14709#14903#0" expanded="false" />
+            <element signature="e#14738#14885#0" expanded="false" />
+            <element signature="n#!!block;n#universalQuantifierRule#0;n#Checker#0" expanded="false" />
+            <element signature="e#15572#15609#0" expanded="false" />
+            <element signature="e#15615#15682#0" expanded="false" />
+            <element signature="n#!!block;n#existentialQuantifierRule#0;n#Checker#0" expanded="false" />
+            <element signature="e#16307#16344#0" expanded="false" />
+            <element signature="e#16350#16417#0" expanded="false" />
+            <element signature="n#!!block;n#compareTrees#0;n#Checker#0" expanded="false" />
+            <element signature="e#16623#16816#0" expanded="false" />
+            <element signature="e#16967#17058#0" expanded="false" />
+            <element signature="e#17099#17193#0" expanded="false" />
+            <element signature="n#!!block;n#checkAxiom_11#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkAxiom_12#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkSubstitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#18856#18946#0" expanded="false" />
+            <element signature="e#18961#18998#0" expanded="false" />
+            <element signature="n#!!block;n#substitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#19604#19762#0" expanded="false" />
+            <element signature="e#19657#19701#0" expanded="false" />
+            <element signature="e#19707#19752#0" expanded="false" />
+            <element signature="e#19840#19879#0" expanded="false" />
+            <element signature="e#19995#20082#0" expanded="false" />
+            <element signature="e#20119#20209#0" expanded="false" />
+            <element signature="e#20246#20681#0" expanded="false" />
+            <element signature="e#20307#20671#0" expanded="false" />
+            <element signature="e#20484#20618#0" expanded="false" />
+            <element signature="e#20540#20600#0" expanded="false" />
+            <element signature="e#20767#20869#0" expanded="false" />
+            <element signature="e#20815#20859#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfBecameBounded#0;n#Checker#0" expanded="false" />
+            <element signature="e#21092#21128#0" expanded="false" />
+            <element signature="e#21206#21405#0" expanded="false" />
+            <element signature="e#21249#21370#0" expanded="false" />
+            <element signature="e#21411#22425#0" expanded="false" />
+            <element signature="e#21584#21648#0" expanded="false" />
+            <element signature="e#21688#21820#0" expanded="false" />
+            <element signature="e#21861#21995#0" expanded="false" />
+            <element signature="e#22036#22263#0" expanded="false" />
+            <element signature="e#22101#22249#0" expanded="false" />
+            <element signature="e#22326#22390#0" expanded="false" />
+            <element signature="n#!!block;n#findFreeVariables#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkForVariables#0;n#Checker#0" expanded="false" />
+            <element signature="e#23415#23470#0" expanded="false" />
+            <element signature="e#23505#23604#0" expanded="false" />
+            <element signature="e#23640#23740#0" expanded="false" />
+            <element signature="e#23776#23957#0" expanded="false" />
+            <element signature="e#23836#23947#0" expanded="false" />
+            <element signature="e#24001#24059#0" expanded="false" />
+            <element signature="e#24108#24170#0" expanded="false" />
+            <element signature="e#24227#24282#0" expanded="false" />
+            <element signature="e#24600#25027#0" expanded="false" />
+            <element signature="e#24883#24950#0" expanded="false" />
+            <element signature="e#25033#25093#0" expanded="false" />
+            <element signature="e#25513#25583#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/correct2.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/incorrect1.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/program.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#14#55#0" expanded="false" />
+            <element signature="n#!!block;n#println#0" expanded="false" />
+            <element signature="n#!!block;n#split#0" expanded="false" />
+            <element signature="e#474#1306#0" expanded="false" />
+            <element signature="e#484#1161#0" expanded="false" />
+            <element signature="e#1204#1300#0" expanded="false" />
+            <element signature="e#2222#2478#0" expanded="false" />
+            <element signature="e#2341#2420#0" expanded="false" />
+            <element signature="n#!!block;n#putInBrackets#0;n#Vertex#0" expanded="false" />
+            <element signature="n#ConstructionParser#0" expanded="false" />
+            <element signature="e#4003#4953#0" expanded="false" />
+            <element signature="e#4117#4943#0" expanded="false" />
+            <element signature="e#4148#4223#0" expanded="false" />
+            <element signature="e#4240#4929#0" expanded="false" />
+            <element signature="e#4617#4889#0" expanded="false" />
+            <element signature="n#!!block;n#parseConjunction#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseDisjunction#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseUnary#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#5695#5773#0" expanded="false" />
+            <element signature="e#5788#5799#0" expanded="false" />
+            <element signature="e#5808#6709#0" expanded="false" />
+            <element signature="e#6334#6535#0" expanded="false" />
+            <element signature="e#6434#6457#0" expanded="false" />
+            <element signature="n#!!block;n#parseVariable#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#6797#7067#0" expanded="false" />
+            <element signature="e#6903#6918#0" expanded="false" />
+            <element signature="e#6961#7057#0" expanded="false" />
+            <element signature="n#!!block;n#parsePredicate#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#7261#7925#0" expanded="false" />
+            <element signature="e#7367#7382#0" expanded="false" />
+            <element signature="e#7425#7522#0" expanded="false" />
+            <element signature="e#7666#7915#0" expanded="false" />
+            <element signature="n#!!block;n#parseTerm#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseAdd#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseMultiply#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#8596#9262#0" expanded="false" />
+            <element signature="e#8702#8717#0" expanded="false" />
+            <element signature="e#8760#8856#0" expanded="false" />
+            <element signature="e#9000#9252#0" expanded="false" />
+            <element signature="e#9346#9456#0" expanded="false" />
+            <element signature="e#9514#9663#0" expanded="false" />
+            <element signature="e#9697#9774#0" expanded="false" />
+            <element signature="n#!!block;n#constructor#0;n#Checker#0" expanded="false" />
+            <element signature="e#10795#11039#0" expanded="false" />
+            <element signature="e#10873#10959#0" expanded="false" />
+            <element signature="e#11193#11702#0" expanded="false" />
+            <element signature="e#11801#12188#0" expanded="false" />
+            <element signature="n#!!block;n#checkAll#0;n#Checker#0" expanded="false" />
+            <element signature="e#12331#12675#0" expanded="false" />
+            <element signature="e#12432#12495#0" expanded="false" />
+            <element signature="e#12510#12628#0" expanded="false" />
+            <element signature="n#!!block;n#checkExpression#0;n#Checker#0" expanded="false" />
+            <element signature="e#12784#12931#0" expanded="false" />
+            <element signature="e#12989#13141#0" expanded="false" />
+            <element signature="e#13698#13942#0" expanded="false" />
+            <element signature="n#!!block;n#modusPonens#0;n#Checker#0" expanded="false" />
+            <element signature="e#14380#14927#0" expanded="false" />
+            <element signature="e#14504#14917#0" expanded="false" />
+            <element signature="e#14709#14903#0" expanded="false" />
+            <element signature="e#14738#14885#0" expanded="false" />
+            <element signature="n#!!block;n#universalQuantifierRule#0;n#Checker#0" expanded="false" />
+            <element signature="e#15572#15609#0" expanded="false" />
+            <element signature="e#15615#15682#0" expanded="false" />
+            <element signature="n#!!block;n#existentialQuantifierRule#0;n#Checker#0" expanded="false" />
+            <element signature="e#16307#16344#0" expanded="false" />
+            <element signature="e#16350#16417#0" expanded="false" />
+            <element signature="n#!!block;n#compareTrees#0;n#Checker#0" expanded="false" />
+            <element signature="e#16623#16816#0" expanded="false" />
+            <element signature="e#16967#17058#0" expanded="false" />
+            <element signature="e#17099#17193#0" expanded="false" />
+            <element signature="n#!!block;n#checkAxiom_11#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkAxiom_12#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkSubstitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#18856#18946#0" expanded="false" />
+            <element signature="e#18961#18998#0" expanded="false" />
+            <element signature="n#!!block;n#substitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#19604#19762#0" expanded="false" />
+            <element signature="e#19657#19701#0" expanded="false" />
+            <element signature="e#19707#19752#0" expanded="false" />
+            <element signature="e#19840#19879#0" expanded="false" />
+            <element signature="e#19995#20082#0" expanded="false" />
+            <element signature="e#20119#20209#0" expanded="false" />
+            <element signature="e#20246#20681#0" expanded="false" />
+            <element signature="e#20307#20671#0" expanded="false" />
+            <element signature="e#20484#20618#0" expanded="false" />
+            <element signature="e#20540#20600#0" expanded="false" />
+            <element signature="e#20767#20869#0" expanded="false" />
+            <element signature="e#20815#20859#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfBecameBounded#0;n#Checker#0" expanded="false" />
+            <element signature="e#21092#21128#0" expanded="false" />
+            <element signature="e#21206#21405#0" expanded="false" />
+            <element signature="e#21249#21370#0" expanded="false" />
+            <element signature="e#21411#22425#0" expanded="false" />
+            <element signature="e#21584#21648#0" expanded="false" />
+            <element signature="e#21688#21820#0" expanded="false" />
+            <element signature="e#21861#21995#0" expanded="false" />
+            <element signature="e#22036#22263#0" expanded="false" />
+            <element signature="e#22101#22249#0" expanded="false" />
+            <element signature="e#22326#22390#0" expanded="false" />
+            <element signature="n#!!block;n#findFreeVariables#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkForVariables#0;n#Checker#0" expanded="false" />
+            <element signature="e#23415#23470#0" expanded="false" />
+            <element signature="e#23505#23604#0" expanded="false" />
+            <element signature="e#23640#23740#0" expanded="false" />
+            <element signature="e#23776#23957#0" expanded="false" />
+            <element signature="e#23836#23947#0" expanded="false" />
+            <element signature="e#24001#24059#0" expanded="false" />
+            <element signature="e#24108#24170#0" expanded="false" />
+            <element signature="e#24227#24282#0" expanded="false" />
+            <element signature="e#24600#25027#0" expanded="false" />
+            <element signature="e#24883#24950#0" expanded="false" />
+            <element signature="e#25033#25093#0" expanded="false" />
+            <element signature="e#25513#25583#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1 hw/program.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3026">
@@ -583,7 +982,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/program.js">
+    <entry file="file://$PROJECT_DIR$/2 hw/program.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6698">
           <caret line="394" column="43" lean-forward="false" selection-start-line="394" selection-start-column="43" selection-end-line="394" selection-end-column="43" />
@@ -591,17 +990,13 @@
             <element signature="e#14#55#0" expanded="false" />
             <element signature="n#!!block;n#println#0" expanded="false" />
             <element signature="n#!!block;n#split#0" expanded="false" />
-            <element signature="n#Vertex#0" expanded="false" />
+            <element signature="e#474#1306#0" expanded="false" />
+            <element signature="e#484#1161#0" expanded="false" />
+            <element signature="e#1204#1300#0" expanded="false" />
             <element signature="e#2222#2478#0" expanded="false" />
             <element signature="e#2341#2420#0" expanded="false" />
             <element signature="n#!!block;n#putInBrackets#0;n#Vertex#0" expanded="false" />
             <element signature="n#ConstructionParser#0" expanded="false" />
-            <element signature="n#!!block;n#parseBinary#0;n#ConstructionParser#0" expanded="false" />
-            <element signature="e#3061#3997#0" expanded="false" />
-            <element signature="e#3156#3987#0" expanded="false" />
-            <element signature="e#3208#3283#0" expanded="false" />
-            <element signature="e#3300#3973#0" expanded="false" />
-            <element signature="e#3669#3933#0" expanded="false" />
             <element signature="e#4003#4953#0" expanded="false" />
             <element signature="e#4117#4943#0" expanded="false" />
             <element signature="e#4148#4223#0" expanded="false" />
@@ -609,15 +1004,28 @@
             <element signature="e#4617#4889#0" expanded="false" />
             <element signature="n#!!block;n#parseConjunction#0;n#ConstructionParser#0" expanded="false" />
             <element signature="n#!!block;n#parseDisjunction#0;n#ConstructionParser#0" expanded="false" />
-            <element signature="n#!!block;n#parseExpression#0;n#ConstructionParser#0" expanded="false" />
             <element signature="n#!!block;n#parseUnary#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#5695#5773#0" expanded="false" />
+            <element signature="e#5788#5799#0" expanded="false" />
+            <element signature="e#5808#6709#0" expanded="false" />
+            <element signature="e#6334#6535#0" expanded="false" />
+            <element signature="e#6434#6457#0" expanded="false" />
             <element signature="n#!!block;n#parseVariable#0;n#ConstructionParser#0" expanded="false" />
             <element signature="e#6797#7067#0" expanded="false" />
             <element signature="e#6903#6918#0" expanded="false" />
             <element signature="e#6961#7057#0" expanded="false" />
             <element signature="n#!!block;n#parsePredicate#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#7261#7925#0" expanded="false" />
             <element signature="e#7367#7382#0" expanded="false" />
             <element signature="e#7425#7522#0" expanded="false" />
+            <element signature="e#7666#7915#0" expanded="false" />
+            <element signature="n#!!block;n#parseTerm#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseAdd#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseMultiply#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#8596#9262#0" expanded="false" />
+            <element signature="e#8702#8717#0" expanded="false" />
+            <element signature="e#8760#8856#0" expanded="false" />
+            <element signature="e#9000#9252#0" expanded="false" />
             <element signature="e#9346#9456#0" expanded="false" />
             <element signature="e#9514#9663#0" expanded="false" />
             <element signature="e#9697#9774#0" expanded="false" />
@@ -630,20 +1038,35 @@
             <element signature="e#12331#12675#0" expanded="false" />
             <element signature="e#12432#12495#0" expanded="false" />
             <element signature="e#12510#12628#0" expanded="false" />
+            <element signature="n#!!block;n#checkExpression#0;n#Checker#0" expanded="false" />
+            <element signature="e#12784#12931#0" expanded="false" />
+            <element signature="e#12989#13141#0" expanded="false" />
             <element signature="e#13698#13942#0" expanded="false" />
             <element signature="n#!!block;n#modusPonens#0;n#Checker#0" expanded="false" />
             <element signature="e#14380#14927#0" expanded="false" />
             <element signature="e#14504#14917#0" expanded="false" />
             <element signature="e#14709#14903#0" expanded="false" />
             <element signature="e#14738#14885#0" expanded="false" />
+            <element signature="n#!!block;n#universalQuantifierRule#0;n#Checker#0" expanded="false" />
+            <element signature="e#15572#15609#0" expanded="false" />
+            <element signature="e#15615#15682#0" expanded="false" />
+            <element signature="n#!!block;n#existentialQuantifierRule#0;n#Checker#0" expanded="false" />
             <element signature="e#16307#16344#0" expanded="false" />
             <element signature="e#16350#16417#0" expanded="false" />
             <element signature="n#!!block;n#compareTrees#0;n#Checker#0" expanded="false" />
             <element signature="e#16623#16816#0" expanded="false" />
             <element signature="e#16967#17058#0" expanded="false" />
             <element signature="e#17099#17193#0" expanded="false" />
+            <element signature="n#!!block;n#checkAxiom_11#0;n#Checker#0" expanded="false" />
             <element signature="n#!!block;n#checkAxiom_12#0;n#Checker#0" expanded="false" />
-            <element signature="n#!!block;n#checkAxiom_A9#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkSubstitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#18856#18946#0" expanded="false" />
+            <element signature="e#18961#18998#0" expanded="false" />
+            <element signature="n#!!block;n#substitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#19604#19762#0" expanded="false" />
+            <element signature="e#19657#19701#0" expanded="false" />
+            <element signature="e#19707#19752#0" expanded="false" />
+            <element signature="e#19840#19879#0" expanded="false" />
             <element signature="e#19995#20082#0" expanded="false" />
             <element signature="e#20119#20209#0" expanded="false" />
             <element signature="e#20246#20681#0" expanded="false" />
@@ -652,6 +1075,10 @@
             <element signature="e#20540#20600#0" expanded="false" />
             <element signature="e#20767#20869#0" expanded="false" />
             <element signature="e#20815#20859#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfBecameBounded#0;n#Checker#0" expanded="false" />
+            <element signature="e#21092#21128#0" expanded="false" />
+            <element signature="e#21206#21405#0" expanded="false" />
+            <element signature="e#21249#21370#0" expanded="false" />
             <element signature="e#21411#22425#0" expanded="false" />
             <element signature="e#21584#21648#0" expanded="false" />
             <element signature="e#21688#21820#0" expanded="false" />
@@ -660,10 +1087,19 @@
             <element signature="e#22101#22249#0" expanded="false" />
             <element signature="e#22326#22390#0" expanded="false" />
             <element signature="n#!!block;n#findFreeVariables#0;n#Checker#0" expanded="false" />
-            <element signature="n#!!block;n#findBoundVariables#0;n#Checker#0" expanded="false" />
             <element signature="n#!!block;n#checkForVariables#0;n#Checker#0" expanded="false" />
-            <element signature="e#23712#23823#0" expanded="false" />
-            <element signature="n#!!block;n#start#0" expanded="false" />
+            <element signature="e#23415#23470#0" expanded="false" />
+            <element signature="e#23505#23604#0" expanded="false" />
+            <element signature="e#23640#23740#0" expanded="false" />
+            <element signature="e#23776#23957#0" expanded="false" />
+            <element signature="e#23836#23947#0" expanded="false" />
+            <element signature="e#24001#24059#0" expanded="false" />
+            <element signature="e#24108#24170#0" expanded="false" />
+            <element signature="e#24227#24282#0" expanded="false" />
+            <element signature="e#24600#25027#0" expanded="false" />
+            <element signature="e#24883#24950#0" expanded="false" />
+            <element signature="e#25033#25093#0" expanded="false" />
+            <element signature="e#25513#25583#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -708,9 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-          <folding>
-            <element signature="e#14#55#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,7 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158950">
           <caret line="9350" column="80" lean-forward="true" selection-start-line="9350" selection-start-column="80" selection-end-line="9350" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -733,11 +1165,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14603">
           <caret line="859" column="0" lean-forward="false" selection-start-line="859" selection-start-column="0" selection-end-line="859" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/input.txt">
+    <entry file="file://$PROJECT_DIR$/2 hw/input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
@@ -745,7 +1176,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/program.js">
+    <entry file="file://$PROJECT_DIR$/2 hw/program.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
@@ -753,17 +1184,13 @@
             <element signature="e#14#55#0" expanded="false" />
             <element signature="n#!!block;n#println#0" expanded="false" />
             <element signature="n#!!block;n#split#0" expanded="false" />
-            <element signature="n#Vertex#0" expanded="false" />
+            <element signature="e#474#1306#0" expanded="false" />
+            <element signature="e#484#1161#0" expanded="false" />
+            <element signature="e#1204#1300#0" expanded="false" />
             <element signature="e#2222#2478#0" expanded="false" />
             <element signature="e#2341#2420#0" expanded="false" />
             <element signature="n#!!block;n#putInBrackets#0;n#Vertex#0" expanded="false" />
             <element signature="n#ConstructionParser#0" expanded="false" />
-            <element signature="n#!!block;n#parseBinary#0;n#ConstructionParser#0" expanded="false" />
-            <element signature="e#3061#3997#0" expanded="false" />
-            <element signature="e#3156#3987#0" expanded="false" />
-            <element signature="e#3208#3283#0" expanded="false" />
-            <element signature="e#3300#3973#0" expanded="false" />
-            <element signature="e#3669#3933#0" expanded="false" />
             <element signature="e#4003#4953#0" expanded="false" />
             <element signature="e#4117#4943#0" expanded="false" />
             <element signature="e#4148#4223#0" expanded="false" />
@@ -771,15 +1198,28 @@
             <element signature="e#4617#4889#0" expanded="false" />
             <element signature="n#!!block;n#parseConjunction#0;n#ConstructionParser#0" expanded="false" />
             <element signature="n#!!block;n#parseDisjunction#0;n#ConstructionParser#0" expanded="false" />
-            <element signature="n#!!block;n#parseExpression#0;n#ConstructionParser#0" expanded="false" />
             <element signature="n#!!block;n#parseUnary#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#5695#5773#0" expanded="false" />
+            <element signature="e#5788#5799#0" expanded="false" />
+            <element signature="e#5808#6709#0" expanded="false" />
+            <element signature="e#6334#6535#0" expanded="false" />
+            <element signature="e#6434#6457#0" expanded="false" />
             <element signature="n#!!block;n#parseVariable#0;n#ConstructionParser#0" expanded="false" />
             <element signature="e#6797#7067#0" expanded="false" />
             <element signature="e#6903#6918#0" expanded="false" />
             <element signature="e#6961#7057#0" expanded="false" />
             <element signature="n#!!block;n#parsePredicate#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#7261#7925#0" expanded="false" />
             <element signature="e#7367#7382#0" expanded="false" />
             <element signature="e#7425#7522#0" expanded="false" />
+            <element signature="e#7666#7915#0" expanded="false" />
+            <element signature="n#!!block;n#parseTerm#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseAdd#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseMultiply#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#8596#9262#0" expanded="false" />
+            <element signature="e#8702#8717#0" expanded="false" />
+            <element signature="e#8760#8856#0" expanded="false" />
+            <element signature="e#9000#9252#0" expanded="false" />
             <element signature="e#9346#9456#0" expanded="false" />
             <element signature="e#9514#9663#0" expanded="false" />
             <element signature="e#9697#9774#0" expanded="false" />
@@ -792,20 +1232,35 @@
             <element signature="e#12331#12675#0" expanded="false" />
             <element signature="e#12432#12495#0" expanded="false" />
             <element signature="e#12510#12628#0" expanded="false" />
+            <element signature="n#!!block;n#checkExpression#0;n#Checker#0" expanded="false" />
+            <element signature="e#12784#12931#0" expanded="false" />
+            <element signature="e#12989#13141#0" expanded="false" />
             <element signature="e#13698#13942#0" expanded="false" />
             <element signature="n#!!block;n#modusPonens#0;n#Checker#0" expanded="false" />
             <element signature="e#14380#14927#0" expanded="false" />
             <element signature="e#14504#14917#0" expanded="false" />
             <element signature="e#14709#14903#0" expanded="false" />
             <element signature="e#14738#14885#0" expanded="false" />
+            <element signature="n#!!block;n#universalQuantifierRule#0;n#Checker#0" expanded="false" />
+            <element signature="e#15572#15609#0" expanded="false" />
+            <element signature="e#15615#15682#0" expanded="false" />
+            <element signature="n#!!block;n#existentialQuantifierRule#0;n#Checker#0" expanded="false" />
             <element signature="e#16307#16344#0" expanded="false" />
             <element signature="e#16350#16417#0" expanded="false" />
             <element signature="n#!!block;n#compareTrees#0;n#Checker#0" expanded="false" />
             <element signature="e#16623#16816#0" expanded="false" />
             <element signature="e#16967#17058#0" expanded="false" />
             <element signature="e#17099#17193#0" expanded="false" />
+            <element signature="n#!!block;n#checkAxiom_11#0;n#Checker#0" expanded="false" />
             <element signature="n#!!block;n#checkAxiom_12#0;n#Checker#0" expanded="false" />
-            <element signature="n#!!block;n#checkAxiom_A9#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkSubstitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#18856#18946#0" expanded="false" />
+            <element signature="e#18961#18998#0" expanded="false" />
+            <element signature="n#!!block;n#substitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#19604#19762#0" expanded="false" />
+            <element signature="e#19657#19701#0" expanded="false" />
+            <element signature="e#19707#19752#0" expanded="false" />
+            <element signature="e#19840#19879#0" expanded="false" />
             <element signature="e#19995#20082#0" expanded="false" />
             <element signature="e#20119#20209#0" expanded="false" />
             <element signature="e#20246#20681#0" expanded="false" />
@@ -814,6 +1269,10 @@
             <element signature="e#20540#20600#0" expanded="false" />
             <element signature="e#20767#20869#0" expanded="false" />
             <element signature="e#20815#20859#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfBecameBounded#0;n#Checker#0" expanded="false" />
+            <element signature="e#21092#21128#0" expanded="false" />
+            <element signature="e#21206#21405#0" expanded="false" />
+            <element signature="e#21249#21370#0" expanded="false" />
             <element signature="e#21411#22425#0" expanded="false" />
             <element signature="e#21584#21648#0" expanded="false" />
             <element signature="e#21688#21820#0" expanded="false" />
@@ -822,10 +1281,19 @@
             <element signature="e#22101#22249#0" expanded="false" />
             <element signature="e#22326#22390#0" expanded="false" />
             <element signature="n#!!block;n#findFreeVariables#0;n#Checker#0" expanded="false" />
-            <element signature="n#!!block;n#findBoundVariables#0;n#Checker#0" expanded="false" />
             <element signature="n#!!block;n#checkForVariables#0;n#Checker#0" expanded="false" />
-            <element signature="e#23712#23823#0" expanded="false" />
-            <element signature="n#!!block;n#start#0" expanded="false" />
+            <element signature="e#23415#23470#0" expanded="false" />
+            <element signature="e#23505#23604#0" expanded="false" />
+            <element signature="e#23640#23740#0" expanded="false" />
+            <element signature="e#23776#23957#0" expanded="false" />
+            <element signature="e#23836#23947#0" expanded="false" />
+            <element signature="e#24001#24059#0" expanded="false" />
+            <element signature="e#24108#24170#0" expanded="false" />
+            <element signature="e#24227#24282#0" expanded="false" />
+            <element signature="e#24600#25027#0" expanded="false" />
+            <element signature="e#24883#24950#0" expanded="false" />
+            <element signature="e#25033#25093#0" expanded="false" />
+            <element signature="e#25513#25583#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -837,18 +1305,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript6.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="442" column="0" lean-forward="false" selection-start-line="442" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,7 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="939" column="9" lean-forward="false" selection-start-line="939" selection-start-column="9" selection-end-line="939" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +1323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,9 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="47" />
-          <folding>
-            <element signature="e#14#55#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,81 +1369,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/output2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="79" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/output2.txt" />
     <entry file="file://$PROJECT_DIR$/3 hw/output.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="9341" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9364" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/pr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="667" column="0" lean-forward="false" selection-start-line="667" selection-start-column="0" selection-end-line="667" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="366" column="0" lean-forward="false" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/incorrect1.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/correct2.in">
+    <entry file="file://$PROJECT_DIR$/hw2/pr.js" />
+    <entry file="file://$PROJECT_DIR$/2 hw/correct2.in">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/incorrect1.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/program.js">
+    <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript6.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="501" column="0" lean-forward="false" selection-start-line="501" selection-start-column="0" selection-end-line="501" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3 hw/proofs/proof2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2 hw/program.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="641" column="32" lean-forward="false" selection-start-line="641" selection-start-column="32" selection-end-line="641" selection-end-column="32" />
           <folding>
             <element signature="e#14#55#0" expanded="false" />
             <element signature="n#!!block;n#println#0" expanded="false" />
             <element signature="n#!!block;n#split#0" expanded="false" />
-            <element signature="n#Vertex#0" expanded="false" />
+            <element signature="e#474#1306#0" expanded="false" />
+            <element signature="e#484#1161#0" expanded="false" />
+            <element signature="e#1204#1300#0" expanded="false" />
             <element signature="e#2222#2478#0" expanded="false" />
             <element signature="e#2341#2420#0" expanded="false" />
             <element signature="n#!!block;n#putInBrackets#0;n#Vertex#0" expanded="false" />
             <element signature="n#ConstructionParser#0" expanded="false" />
-            <element signature="n#!!block;n#parseBinary#0;n#ConstructionParser#0" expanded="false" />
-            <element signature="e#3061#3997#0" expanded="false" />
-            <element signature="e#3156#3987#0" expanded="false" />
-            <element signature="e#3208#3283#0" expanded="false" />
-            <element signature="e#3300#3973#0" expanded="false" />
-            <element signature="e#3669#3933#0" expanded="false" />
             <element signature="e#4003#4953#0" expanded="false" />
             <element signature="e#4117#4943#0" expanded="false" />
             <element signature="e#4148#4223#0" expanded="false" />
@@ -996,15 +1461,28 @@
             <element signature="e#4617#4889#0" expanded="false" />
             <element signature="n#!!block;n#parseConjunction#0;n#ConstructionParser#0" expanded="false" />
             <element signature="n#!!block;n#parseDisjunction#0;n#ConstructionParser#0" expanded="false" />
-            <element signature="n#!!block;n#parseExpression#0;n#ConstructionParser#0" expanded="false" />
             <element signature="n#!!block;n#parseUnary#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#5695#5773#0" expanded="false" />
+            <element signature="e#5788#5799#0" expanded="false" />
+            <element signature="e#5808#6709#0" expanded="false" />
+            <element signature="e#6334#6535#0" expanded="false" />
+            <element signature="e#6434#6457#0" expanded="false" />
             <element signature="n#!!block;n#parseVariable#0;n#ConstructionParser#0" expanded="false" />
             <element signature="e#6797#7067#0" expanded="false" />
             <element signature="e#6903#6918#0" expanded="false" />
             <element signature="e#6961#7057#0" expanded="false" />
             <element signature="n#!!block;n#parsePredicate#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#7261#7925#0" expanded="false" />
             <element signature="e#7367#7382#0" expanded="false" />
             <element signature="e#7425#7522#0" expanded="false" />
+            <element signature="e#7666#7915#0" expanded="false" />
+            <element signature="n#!!block;n#parseTerm#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseAdd#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseMultiply#0;n#ConstructionParser#0" expanded="false" />
+            <element signature="e#8596#9262#0" expanded="false" />
+            <element signature="e#8702#8717#0" expanded="false" />
+            <element signature="e#8760#8856#0" expanded="false" />
+            <element signature="e#9000#9252#0" expanded="false" />
             <element signature="e#9346#9456#0" expanded="false" />
             <element signature="e#9514#9663#0" expanded="false" />
             <element signature="e#9697#9774#0" expanded="false" />
@@ -1017,20 +1495,35 @@
             <element signature="e#12331#12675#0" expanded="false" />
             <element signature="e#12432#12495#0" expanded="false" />
             <element signature="e#12510#12628#0" expanded="false" />
+            <element signature="n#!!block;n#checkExpression#0;n#Checker#0" expanded="false" />
+            <element signature="e#12784#12931#0" expanded="false" />
+            <element signature="e#12989#13141#0" expanded="false" />
             <element signature="e#13698#13942#0" expanded="false" />
             <element signature="n#!!block;n#modusPonens#0;n#Checker#0" expanded="false" />
             <element signature="e#14380#14927#0" expanded="false" />
             <element signature="e#14504#14917#0" expanded="false" />
             <element signature="e#14709#14903#0" expanded="false" />
             <element signature="e#14738#14885#0" expanded="false" />
+            <element signature="n#!!block;n#universalQuantifierRule#0;n#Checker#0" expanded="false" />
+            <element signature="e#15572#15609#0" expanded="false" />
+            <element signature="e#15615#15682#0" expanded="false" />
+            <element signature="n#!!block;n#existentialQuantifierRule#0;n#Checker#0" expanded="false" />
             <element signature="e#16307#16344#0" expanded="false" />
             <element signature="e#16350#16417#0" expanded="false" />
             <element signature="n#!!block;n#compareTrees#0;n#Checker#0" expanded="false" />
             <element signature="e#16623#16816#0" expanded="false" />
             <element signature="e#16967#17058#0" expanded="false" />
             <element signature="e#17099#17193#0" expanded="false" />
+            <element signature="n#!!block;n#checkAxiom_11#0;n#Checker#0" expanded="false" />
             <element signature="n#!!block;n#checkAxiom_12#0;n#Checker#0" expanded="false" />
-            <element signature="n#!!block;n#checkAxiom_A9#0;n#Checker#0" expanded="false" />
+            <element signature="n#!!block;n#checkSubstitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#18856#18946#0" expanded="false" />
+            <element signature="e#18961#18998#0" expanded="false" />
+            <element signature="n#!!block;n#substitution#0;n#Checker#0" expanded="false" />
+            <element signature="e#19604#19762#0" expanded="false" />
+            <element signature="e#19657#19701#0" expanded="false" />
+            <element signature="e#19707#19752#0" expanded="false" />
+            <element signature="e#19840#19879#0" expanded="false" />
             <element signature="e#19995#20082#0" expanded="false" />
             <element signature="e#20119#20209#0" expanded="false" />
             <element signature="e#20246#20681#0" expanded="false" />
@@ -1039,6 +1532,10 @@
             <element signature="e#20540#20600#0" expanded="false" />
             <element signature="e#20767#20869#0" expanded="false" />
             <element signature="e#20815#20859#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfBecameBounded#0;n#Checker#0" expanded="false" />
+            <element signature="e#21092#21128#0" expanded="false" />
+            <element signature="e#21206#21405#0" expanded="false" />
+            <element signature="e#21249#21370#0" expanded="false" />
             <element signature="e#21411#22425#0" expanded="false" />
             <element signature="e#21584#21648#0" expanded="false" />
             <element signature="e#21688#21820#0" expanded="false" />
@@ -1047,11 +1544,28 @@
             <element signature="e#22101#22249#0" expanded="false" />
             <element signature="e#22326#22390#0" expanded="false" />
             <element signature="n#!!block;n#findFreeVariables#0;n#Checker#0" expanded="false" />
-            <element signature="n#!!block;n#findBoundVariables#0;n#Checker#0" expanded="false" />
             <element signature="n#!!block;n#checkForVariables#0;n#Checker#0" expanded="false" />
-            <element signature="e#23712#23823#0" expanded="false" />
-            <element signature="n#!!block;n#start#0" expanded="false" />
+            <element signature="e#23415#23470#0" expanded="false" />
+            <element signature="e#23505#23604#0" expanded="false" />
+            <element signature="e#23640#23740#0" expanded="false" />
+            <element signature="e#23776#23957#0" expanded="false" />
+            <element signature="e#23836#23947#0" expanded="false" />
+            <element signature="e#24001#24059#0" expanded="false" />
+            <element signature="e#24108#24170#0" expanded="false" />
+            <element signature="e#24227#24282#0" expanded="false" />
+            <element signature="e#24600#25027#0" expanded="false" />
+            <element signature="e#24883#24950#0" expanded="false" />
+            <element signature="e#25033#25093#0" expanded="false" />
+            <element signature="e#25513#25583#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3 hw/proofs/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

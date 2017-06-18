@@ -8,7 +8,7 @@ const PREDICATE_SIGN = "predicate";
 const MULTIPLY_SIGN = "multiply";
 const CONST_SIGN = "const";
 
-const inputFile = "correct15.in";
+const inputFile = "correct11.in";
 const outputFile = "output.txt";
 
 const fs = require('fs');
@@ -556,10 +556,13 @@ class Checker {
         let boundVariables = {};
 
         this.checkForVariables(tree, variables, quantifiers, freeVariables);
-        Object.entries(variables).forEach(x => {
+        for (let x in variables) {
             if (!freeVariables[x[0]]) boundVariables[x[0]] = true;
-            return x
-        });
+        }
+        // Object.entries(variables).forEach(x => {
+        //     if (!freeVariables[x[0]]) boundVariables[x[0]] = true;
+        //     return x
+        // });
 
         return boundVariables;
     }
@@ -594,6 +597,7 @@ class Checker {
 }
 
 function start() {
+    console.time("Чтение");
     let strings = fs.readFileSync(inputFile, 'utf8').split("\n");
     strings = strings.map(x => x.replace(/\s+/g, ""));
     let hypothesisStrings = [];
@@ -616,8 +620,13 @@ function start() {
 
     let finalTree = ConstructionParser.parseExpression(finalExpression);
 
+    console.timeEnd("Чтение");
+    console.time("парс");
     let checker = new Checker(strings, hypothesisStrings);
+    console.timeEnd("парс");
+    console.time("проверка");
     let result = firstString + "\n" + checker.checkAll();
+    console.timeEnd("проверка");
 
     if (finalTree.string !== checker.trees[checker.trees.length - 1].string) {
         checker.errors.push("Доказано не то, что требовалось")
