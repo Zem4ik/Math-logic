@@ -3,18 +3,46 @@
  * Created by Vlad on 13.06.2017.
  */
 
+let inputFile;
+let outputFile;
+let mode;
+if (0) {
+    inputFile = "correct15.in";
+    outputFile = process.argv[3];
+    mode = "deduction";
+} else {
+    inputFile = "output2.txt";
+    outputFile = "zeb1.txt";
+    mode = "check";
+}
+
+if (inputFile === undefined || outputFile === undefined || mode === undefined) {
+    throw new Error("Not enough arguments");
+}
+
+
 const VARIABLE_SIGN = "variable";
 const PREDICATE_SIGN = "predicate";
 const MULTIPLY_SIGN = "multiply";
 const CONST_SIGN = "const";
 
-const inputFile = "correct11.in";
-const outputFile = "output.txt";
 
 const fs = require('fs');
 
 function println(string) {
     console.log(string);
+}
+
+function replace(string, map) {
+    let result = "";
+    for (let i = 0; i < string.length; ++i) {
+        if (map[string[i]] !== undefined) {
+            result += map[string[i]];
+        } else {
+            result += string[i];
+        }
+    }
+    return result;
 }
 
 function split(inputString) {
@@ -99,171 +127,180 @@ class Vertex {
     }
 }
 
-class ConstructionParser {
+class Parser {
+    parse(expression) {
+        this.expression = expression.replace(/\s+/g, "");
+        this.position = 0;
+        return this.parseExpression();
+    }
 
-    static parseBinary(inputString, sign, parseFunction0, parseFunction1, parseFunction2, leftOrder) {
-        let counter = 0;
-        if (leftOrder) {
-            const symbol = sign[0];
-            for (let i = 0; i < inputString.length; ++i) {
-                if (i === inputString.length - 1) {
-                    return parseFunction0(inputString);
-                }
-                switch (inputString[i]) {
-                    case '(': {
-                        ++counter;
-                        break;
-                    }
-                    case ')': {
-                        --counter;
-                        break;
-                    }
-                    case symbol: {
-                        if (inputString.substr(i, i + sign.length)) {
-                            if (counter !== 0) break;
-                            return new Vertex(sign, null, parseFunction1(inputString.substring(0, i)), parseFunction2(inputString.substr(i + sign.length, inputString.length)), null);
-                        }
-                    }
-                }
+    parseBinary(sign, firstFunction, secondFunction) {
+        if (this.position >= this.expression.length) {
+            throw new Error(`Error while parsing '${sign}': ${this.expression}`);
+        }
+        let result = firstFunction.call(this);
+        while (this.expression.startsWith(sign, this.position)) {
+            this.position += sign.length;
+            result = new Vertex(sign, null, result, secondFunction.call(this), null);
+        }
+        return result;
+    }
+
+    parseExpression() {
+        return this.parseBinary("->", this.parseDisjunction, this.parseExpression);
+    }
+
+    parseDisjunction() {
+        return this.parseBinary("|", this.parseConjunction, this.parseConjunction);
+    }
+
+    parseConjunction() {
+        return this.parseBinary("&", this.parseUnary, this.parseUnary);
+    }
+
+    parseUnary() {
+        if (this.expression.startsWith("!", this.position)) {
+            this.position++;
+            return new Vertex("!", null, this.parseUnary(), null, null);
+        } else if (this.expression.startsWith("(", this.position)) {
+            let i = this.position + 1;
+            let balance = 1;
+            for (; balance !== 0 && i < this.expression.length; ++i) {
+                if (this.expression[i] === "(") balance++;
+                if (this.expression[i] === ")") balance--;
+            }
+            if (i < this.expression.length && /^[=+*'’]/.test(this.expression[i])) {
+                return this.parsePredicate();
+            }
+
+            this.position++;
+            let result = this.parseExpression();
+            if (this.expression.startsWith(")", this.position)) {
+                this.position++;
+                return result;
+            } else {
+                throw new Error(`Parentheses not closed: ${this.expression}`);
+            }
+        } else if (/^[@?]/.test(this.expression[this.position])) {
+            let sign = this.expression[this.position++];
+            let variable = this.parseVariable();
+            return new Vertex(sign, variable.variable, this.parseUnary(), null, null);
+        } else {
+            return this.parsePredicate();
+        }
+    }
+
+    parseVariable() {
+        let variable = this.expression[this.position];
+        if (/^[a-z]/.test(this.expression[this.position])) {
+            ++this.position;
+            while (/^[0-9]/.test(this.expression[this.position])) {
+                variable += this.expression[this.position++];
             }
         } else {
-            const symbol = sign[sign.length - 1];
-            for (let i = inputString.length - 1; i >= 0; --i) {
-                if (i === 0) {
-                    return parseFunction0(inputString);
+            throw new Error(`Error while parsing variable: ${this.expression}`);
+        }
+        return new Vertex(VARIABLE_SIGN, variable, null, null, null);
+    }
+
+    parsePredicate() {
+        let variable = this.expression[this.position];
+        if (/^[A-Z]/.test(this.expression[this.position])) {
+            this.position++;
+            while (/^[0-9]/.test(this.expression[this.position])) {
+                variable += this.expression[this.position++];
+            }
+            if (this.expression[this.position] === "(") {
+                this.position++;
+                let terms = [this.parseAdd()];
+                while (this.expression[this.position] === ",") {
+                    this.position++;
+                    terms.push(this.parseAdd());
                 }
-                switch (inputString[i]) {
-                    case ')': {
-                        ++counter;
-                        break;
-                    }
-                    case '(': {
-                        --counter;
-                        break;
-                    }
-                    case symbol: {
-                        if (inputString.substr(i - sign.length + 1, i + 1)) {
-                            if (counter !== 0) break;
-                            return new Vertex(sign, null, parseFunction1(inputString.substring(0, i - sign.length + 1)), parseFunction2(inputString.substr(i + 1, inputString.length)), null);
-                        }
-                    }
+                if (this.expression[this.position] === ")") {
+                    this.position++;
+                    return new Vertex(PREDICATE_SIGN, variable, null, null, terms);
+                } else {
+                    throw new Error(`Parentheses not closed: ${this.expression}`);
                 }
+            } else {
+                return new Vertex(VARIABLE_SIGN, variable, null, null, null);
             }
+        } else {
+            let first = this.parseAdd();
+            if (this.expression[this.position] !== "=") throw new Error(`Equals sign expected: ${this.expression}`);
+            this.position++;
+            return new Vertex("=", null, first, this.parseAdd(), null);
         }
     }
 
-    static parseConjunction(inputString) {
-        return ConstructionParser.parseBinary(inputString, "&", ConstructionParser.parseUnary, ConstructionParser.parseConjunction, ConstructionParser.parseUnary, false);
+    parseAdd() {
+        return this.parseBinary("+", this.parseMultiply, this.parseMultiply);
     }
 
-    static parseDisjunction(inputString) {
-        return ConstructionParser.parseBinary(inputString, "|", ConstructionParser.parseConjunction, ConstructionParser.parseDisjunction, ConstructionParser.parseConjunction, false);
+    parseMultiply() {
+        return this.parseBinary("*", this.parseInc, this.parseInc);
     }
 
-    static parseExpression(inputString) {
-        return ConstructionParser.parseBinary(inputString, "->", ConstructionParser.parseDisjunction, ConstructionParser.parseDisjunction, ConstructionParser.parseExpression, true);
-    }
-
-    static parseUnary(inputString) {
-        try {
-            return ConstructionParser.parsePredicate(inputString);
-        } catch (error) {
+    parseInc() {
+        let term = this.parseTerm();
+        let counter = 0;
+        while (/^[’']/.test(this.expression[this.position])) {
+            this.position++;
+            term = new Vertex("'", null, term, null, null);
         }
-        switch (inputString[0]) {
-            case '!': {
-                return new Vertex("!", null, ConstructionParser.parseUnary(inputString.substring(1, inputString.length)), null, null);
+        return term;
+    }
+
+    parseTerm() {
+        let variable = this.expression[this.position];
+        if (/^[a-z]/.test(this.expression[this.position])) {
+            this.position++;
+            while (/^[0-9]/.test(this.expression[this.position])) {
+                variable += this.expression[this.position++];
             }
-            case '(': {
-                return ConstructionParser.parseExpression(inputString.substring(1, inputString.length - 1));
-            }
-            case '@':
-            case '?': {
-                let variable;
-                let i;
-                if (/^[a-z]/.test(inputString.substring(1, inputString.length))) {
-                    for (i = 2; /^[0-9]/.test(inputString.substring(i, inputString.length)); ++i) {
-                    }
-                    variable = inputString.substring(1, i);
+            if (this.expression[this.position] === "(") {
+                this.position++;
+                let terms = [this.parseAdd()];
+                while (this.expression[this.position] === ",") {
+                    this.position++;
+                    terms.push(this.parseAdd());
                 }
-                return new Vertex(inputString[0], variable, ConstructionParser.parseUnary(inputString.substring(i, inputString.length)), null, null);
+                if (this.expression[this.position] === ")") {
+                    this.position++;
+                    return new Vertex(MULTIPLY_SIGN, variable, null, null, terms);
+                } else {
+                    throw new Error(`Parentheses not closed: ${this.expression}`);
+                }
+            } else {
+                return new Vertex(VARIABLE_SIGN, variable, null, null, null);
             }
-        }
-    }
-
-    static parseVariable(inputString) {
-        if (/^[a-z]/.test(inputString)) {
-            let i;
-            for (i = 1; i < inputString.length && /[0-9]/.test(inputString[i]); ++i) {
+        } else if (this.expression[this.position] === "(") {
+            this.position++;
+            let expression = this.parseAdd();
+            if (this.expression[this.position] === ")") {
+                this.position++;
+                return expression;
+            } else {
+                throw new Error(`Parentheses not closed: ${this.expression}`);
             }
-            if (i === inputString.length) {
-                return new Vertex(VARIABLE_SIGN, inputString, null, null, null);
-            }
-        }
-        throw new Error("[parseVariable] can't parse: " + inputString);
-    }
-
-    static parsePredicate(inputString) {
-        if (/^[A-Z]/.test(inputString.substring(0, inputString.length))) {
-            let i;
-            for (i = 1; i < inputString.length && /[0-9]/.test(inputString[i]); ++i) {
-            }
-            if (i === inputString.length) {
-                return new Vertex(PREDICATE_SIGN, inputString, null, null, null);
-            }
-            let variable = inputString.substring(0, i);
-            if (inputString[i] === "(" && inputString[inputString.length - 1] === ")") {
-                let terms = split(inputString.substring(i + 1, inputString.length - 1));
-                terms = terms.map(ConstructionParser.parseTerm);
-                return new Vertex(PREDICATE_SIGN, variable, null, null, terms);
-            }
-        }
-        return ConstructionParser.parseBinary(inputString, "=", null, ConstructionParser.parseTerm, ConstructionParser.parseTerm, true)
-    }
-
-    static parseTerm(inputString) {
-        return ConstructionParser.parseBinary(inputString, "+", ConstructionParser.parseAdd, ConstructionParser.parseTerm, ConstructionParser.parseAdd, false);
-    }
-
-    static parseAdd(inputString) {
-        return ConstructionParser.parseBinary(inputString, "*", ConstructionParser.parseMultiply, ConstructionParser.parseAdd, ConstructionParser.parseMultiply, false);
-    }
-
-    static parseMultiply(inputString) {
-        if (/^[a-z]/.test(inputString.substring(0, inputString.length))) {
-            let i;
-            for (i = 1; i < inputString.length && /[0-9]/.test(inputString[i]); ++i) {
-            }
-            if (i === inputString.length) {
-                return new Vertex(VARIABLE_SIGN, inputString, null, null, null);
-            }
-            let variable = inputString.substring(0, i);
-            if (inputString[i] === "(" && inputString[inputString.length - 1] === ")") {
-                let terms = inputString.substring(i + 1, inputString.length - 1).split(',');
-                terms = terms.map(ConstructionParser.parseTerm);
-                return new Vertex(MULTIPLY_SIGN, variable, null, null, terms);
-            }
-        }
-        if (inputString[0] === "(" && inputString[inputString.length - 1] === ")") {
-            return ConstructionParser.parseTerm(inputString.substring(1, inputString.length - 1));
-        }
-        if (inputString[inputString.length - 1] === "'") {
-            return new Vertex("'", null, ConstructionParser.parseMultiply(inputString.substring(0, inputString.length - 1)), null, null);
-        }
-        if (inputString === "0") {
+        } else if (this.expression[this.position] === "0") {
+            this.position++;
             return new Vertex(CONST_SIGN, "0", null, null, null);
+        } else {
+            throw new Error(`Can't parse: ${this.expression}`);
         }
-        return ConstructionParser.parseVariable(inputString);
     }
-
 }
 
 class Checker {
 
     constructor(inputStrings, hypothesisStrings) {
+        let parser = new Parser();
         this.inputStrings = inputStrings;
         this.hypothesisStrings = hypothesisStrings;
-        this.trees = inputStrings.map(ConstructionParser.parseExpression);
-        this.hypothesisTrees = hypothesisStrings.map(ConstructionParser.parseExpression);
+        this.trees = inputStrings.map(x => parser.parse(x));
+        this.hypothesisTrees = hypothesisStrings.map(x => parser.parse(x));
         this.globalExpressionsMap = {};
         this.hypothesisExpressionsMap = {};
         this.rightExpressionsMap = {};
@@ -295,7 +332,7 @@ class Checker {
             "(A->C)->(B->C)->(A|B->C)",   // 8
             "(A->B)->(A->!B)->!A",        // 9
             "!!A->A"                      // 10
-        ].map(ConstructionParser.parseExpression);
+        ].map(x => parser.parse(x));
         //formal system axioms
         this.mathAxioms = [
             "a=b->a'=b'",                 // 1
@@ -306,7 +343,7 @@ class Checker {
             "a+0=a",                      // 6
             "a*0=0",                      // 7
             "a*b'=a*b+a"                  // 8
-        ].map(ConstructionParser.parseExpression);
+        ].map(x => parser.parse(x));
     }
 
     checkAll() {
@@ -321,6 +358,43 @@ class Checker {
                 temp = error.message;
             }
             result += `(${temp})\n`;
+        }
+        return result;
+    }
+
+    deduce() {
+        let result = "";
+        for (let i = 0; i < this.hypothesisTrees.length - 1; ++i) {
+            result += `${this.hypothesisTrees[i].string}`;
+            if (i !== this.hypothesisTrees.length - 2) {
+                result += ",";
+            }
+        }
+        result += `|-${this.hypothesisTrees[this.hypothesisTrees.length - 1].string}->${this.trees[this.trees.length - 1].string}\n`;
+        let alpha = this.hypothesisTrees[this.hypothesisTrees.length - 1].string;
+        for (let i = 0; i < this.trees.length; ++i) {
+            let temp;
+            try {
+                temp = this.checkExpression(i);
+            } catch (error) {
+                this.errors.push(`(${i + 1}) ${error.message}`);
+                temp = error.message;
+            }
+            if (alpha === this.trees[i].string) {
+                result += replace(this.selfDeduction, {"H": alpha});
+            } else if (temp.startsWith("Сх. акс.") || temp.startsWith("Предп.")) {
+                result += replace(this.axiomDeduction, {"A": this.trees[i].string, "H": alpha});
+            } else if (temp.startsWith("Modus Ponens ")) {
+                temp = temp.split(/[\s,]/);
+                let dj = this.trees[temp[2] - 1].string;
+                let di = this.trees[i].string;
+                result += replace(this.modusPonensDeduction, {"A": dj, "H": alpha, "B": di});
+            } else if (temp.startsWith("Правило вывода для квантора всеобщности")) {
+                result += replace(this.anyDeduction, {"A": this.trees[i].left.string, "H": alpha, "B": this.trees[i].right.left.string, "x": this.trees[i].right.variable});
+            } else if (temp.startsWith("Правило вывода для квантора существования")) {
+                result += replace(this.existsDeduction, {"A": this.trees[i].left.left.string, "H": alpha, "B": this.trees[i].right.left.string, "x": this.trees[i].left.variable});
+            }
+            result += "\n";
         }
         return result;
     }
@@ -377,7 +451,8 @@ class Checker {
         let ancestor = "(" + this.trees[k].left.string + "->" + this.trees[k].right.left.string + ")";
         let leftFreeVariables = this.findFreeVariables(this.trees[k].left);
         let variable = this.trees[k].right.variable;
-        if(leftFreeVariables[variable] !== undefined) throw new Error(`Переменная ${variable} входит свободно в формулу ${this.trees[k].right.string}`);
+        if (leftFreeVariables[variable] !== undefined)
+            throw new Error(`Переменная ${variable} входит свободно в формулу ${this.trees[k].right.string}`);
         if (this.globalExpressionsMap[ancestor] === undefined || this.globalExpressionsMap[ancestor] > k) {
             return false;
         } else {
@@ -390,7 +465,8 @@ class Checker {
         let ancestor = "(" + this.trees[k].left.left.string + "->" + this.trees[k].right.string + ")";
         let rightFreeVariables = this.findFreeVariables(this.trees[k].right);
         let variable = this.trees[k].left.variable;
-        if(rightFreeVariables[variable] !== undefined) throw new Error(`Переменная ${variable} входит свободно в формулу ${this.trees[k].left.string}`);
+        if (rightFreeVariables[variable] !== undefined)
+            throw new Error(`Переменная ${variable} входит свободно в формулу ${this.trees[k].left.string}`);
         if (this.globalExpressionsMap[ancestor] === undefined || this.globalExpressionsMap[ancestor] > k) {
             return false;
         } else {
@@ -435,7 +511,8 @@ class Checker {
         let variable = this.trees[k].left.right.variable;
         let expression = this.trees[k].right;
         let freeVariables = this.findFreeVariables(expression);
-        if (freeVariables[variable] === undefined) throw new Error(`переменная ${variable} входит свободно в формулу ${expression.string}`);
+        if (freeVariables[variable] === undefined)
+            throw new Error(`переменная ${variable} входит свободно в формулу ${expression.string}`);
         return !(this.trees[k].left.left.string !== expression.string.replace(new RegExp(variable, 'g'), "0") &&
         this.trees[k].left.right.left.left.string !== expression.string &&
         this.trees[k].left.right.left.right.string !== expression.string.replace(new RegExp(variable, 'g'), variable + "'"));
@@ -596,7 +673,9 @@ class Checker {
 
 }
 
+
 function start() {
+    let parser = new Parser();
     console.time("Чтение");
     let strings = fs.readFileSync(inputFile, 'utf8').split("\n");
     strings = strings.map(x => x.replace(/\s+/g, ""));
@@ -609,32 +688,57 @@ function start() {
         firstString = strings.shift();
         headlineStrings = split(firstString);
         if (headlineStrings[0] === "") headlineStrings.shift();
-        if(strings[strings.length - 1] === "") delete strings.pop();
+        if (strings[strings.length - 1] === "") delete strings.pop();
         for (let i = 0; i < (headlineStrings.length - 1); ++i) {
             hypothesisStrings.push(headlineStrings[i]);
         }
         finalExpression = headlineStrings[headlineStrings.length - 1];
     } else {
-        throw new Error("can't parse first string");
+        throw new Error("Can't parse first string");
     }
 
-    let finalTree = ConstructionParser.parseExpression(finalExpression);
+    let finalTree = parser.parse(finalExpression);
 
     console.timeEnd("Чтение");
-    console.time("парс");
+    console.time("Parsing");
     let checker = new Checker(strings, hypothesisStrings);
-    console.timeEnd("парс");
-    console.time("проверка");
-    let result = firstString + "\n" + checker.checkAll();
-    console.timeEnd("проверка");
 
-    if (finalTree.string !== checker.trees[checker.trees.length - 1].string) {
-        checker.errors.push("Доказано не то, что требовалось")
+    checker.anyDeduction = fs.readFileSync("any.proof", 'utf8');
+    checker.existsDeduction = fs.readFileSync("exists.proof", 'utf8');
+    checker.selfDeduction = fs.readFileSync("self.proof", 'utf8');
+    checker.modusPonensDeduction = fs.readFileSync("modusponens.proof", 'utf8');
+    checker.axiomDeduction = fs.readFileSync("axiom.proof", 'utf8');
+
+    console.timeEnd("Parsing");
+    let result;
+    if (mode === "check") {
+        console.time("проверка");
+        result = firstString + "\n" + checker.checkAll();
+        console.timeEnd("проверка");
+
+        if (finalTree.string !== checker.trees[checker.trees.length - 1].string) {
+            checker.errors.push("Доказано не то, что требовалось")
+        }
+
+        println(`   Количество ошибок: ${checker.errors.length}`);
+        checker.errors.forEach(x => println(x));
+    } else if (mode === "deduction") {
+        console.time("проверка");
+        checker.checkAll();
+        console.timeEnd("проверка");
+
+        if(checker.errors.length !== 0) {
+            println(`   Во входном файле присутствуют ошибки: ${checker.errors.length}`);
+            checker.errors.forEach(x => println(x));
+        } else {
+            console.time("Дедуция");
+            result = checker.deduce();
+            console.timeEnd("Дедуция");
+        }
     }
     fs.writeFileSync(outputFile, result);
 
-    println(`   Количество ошибок: ${checker.errors.length}`);
-    checker.errors.forEach(x => println(x));
+
 }
 
 console.time("Время работы");
