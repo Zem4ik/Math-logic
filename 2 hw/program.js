@@ -3,18 +3,9 @@
  * Created by Vlad on 13.06.2017.
  */
 
-let inputFile;
-let outputFile;
-let mode;
-if (0) {
-    inputFile = "correct15.in";
-    outputFile = process.argv[3];
-    mode = "deduction";
-} else {
-    inputFile = "output2.txt";
-    outputFile = "zeb1.txt";
-    mode = "check";
-}
+const inputFile = process.argv[2];
+const outputFile = process.argv[3];
+const mode = process.argv[4];
 
 if (inputFile === undefined || outputFile === undefined || mode === undefined) {
     throw new Error("Not enough arguments");
@@ -106,6 +97,7 @@ class Vertex {
                 if (terms !== null) {
                     this.string += "(" + terms[0].string;
                     for (let i = 1; i < terms.length; ++i) {
+                        this.string += ",";
                         this.string += terms[i].string;
                     }
                     this.string += ")";
@@ -221,7 +213,7 @@ class Parser {
                     this.position++;
                     return new Vertex(PREDICATE_SIGN, variable, null, null, terms);
                 } else {
-                    throw new Error(`Parentheses not closed: ${this.expression}`);
+                    throw   new Error(`Parentheses not closed: ${this.expression}`);
                 }
             } else {
                 return new Vertex(VARIABLE_SIGN, variable, null, null, null);
@@ -346,18 +338,20 @@ class Checker {
         ].map(x => parser.parse(x));
     }
 
-    checkAll() {
+    checkAll(checkDeduction = false) {
         let result = "";
         for (let i = 0; i < this.trees.length; ++i) {
-            result += `(${i + 1}) ${this.inputStrings[i]} `;
+            //result += `(${i + 1}) ${this.inputStrings[i]} `;
+            result += this.trees[i].string;
             let temp;
             try {
-                temp = this.checkExpression(i);
+                temp = this.checkExpression(i, checkDeduction);
             } catch (error) {
                 this.errors.push(`(${i + 1}) ${error.message}`);
                 temp = error.message;
             }
-            result += `(${temp})\n`;
+            //result += `(${temp})\n`;
+            result += '\n';
         }
         return result;
     }
@@ -390,16 +384,26 @@ class Checker {
                 let di = this.trees[i].string;
                 result += replace(this.modusPonensDeduction, {"A": dj, "H": alpha, "B": di});
             } else if (temp.startsWith("Правило вывода для квантора всеобщности")) {
-                result += replace(this.anyDeduction, {"A": this.trees[i].left.string, "H": alpha, "B": this.trees[i].right.left.string, "x": this.trees[i].right.variable});
+                result += replace(this.anyDeduction, {
+                    "A": this.trees[i].left.string,
+                    "H": alpha,
+                    "B": this.trees[i].right.left.string,
+                    "x": this.trees[i].right.variable
+                });
             } else if (temp.startsWith("Правило вывода для квантора существования")) {
-                result += replace(this.existsDeduction, {"A": this.trees[i].left.left.string, "H": alpha, "B": this.trees[i].right.left.string, "x": this.trees[i].left.variable});
+                result += replace(this.existsDeduction, {
+                    "A": this.trees[i].left.left.string,
+                    "H": alpha,
+                    "B": this.trees[i].right.string,
+                    "x": this.trees[i].left.variable
+                });
             }
             result += "\n";
         }
         return result;
     }
 
-    checkExpression(k) {
+    checkExpression(k, checkDeduction = false) {
         for (let i = 0; i < this.axioms.length; ++i) {
             let variables = {};
             if (this.compareTrees(this.trees[k], this.axioms[i], variables)) return `Сх. акс. ${i + 1}`
@@ -411,21 +415,50 @@ class Checker {
 
         let temp = this.modusPonens(k);
         if (temp) return `Modus Ponens ${temp.i + 1}, ${temp.j + 1}`;
-        if (this.checkAxiom_11(k)) return `Сх. акс. 11`;
-        if (this.checkAxiom_12(k)) return `Сх. акс. 12`;
-        if (this.checkAxiom_A9(k)) return `Сх. акс. A9`;
+
+        let error;
+        try {
+            if (this.checkAxiom_11(k)) return `Сх. акс. 11`;
+        } catch (e) {
+            error = e;
+        }
+
+        try {
+            if (this.checkAxiom_12(k)) return `Сх. акс. 12`;
+        } catch (e) {
+            error = e;
+        }
+
+        try {
+            if (this.checkAxiom_A9(k)) return `Сх. акс. A9`;
+        } catch (e) {
+            error = e;
+        }
+
+
         if (this.hypothesisExpressionsMap[this.trees[k].string] !== undefined) return `Предп. ${this.hypothesisExpressionsMap[this.trees[k].string] + 1}`;
 
         let boundedVariables = this.findBoundVariables(this.trees[k]);
         for (let variable in boundedVariables) {
-            if (this.bannedVariablesMap[variable]) throw new Error(`используется правило с кванторов по переменной ${variable},
+            if (this.bannedVariablesMap[variable] && checkDeduction) throw new Error(`используется правило с кванторов по переменной ${variable},
              входящей свободно в допущение ${this.hypothesisStrings[this.hypothesisTrees.length - 1]}`);
         }
 
-        temp = this.universalQuantifierRule(k);
-        if (temp !== false) return `Правило вывода для квантора всеобщности ${temp + 1}`;
-        temp = this.existentialQuantifierRule(k);
-        if (temp !== false) return `Правило вывода для квантора существования ${temp + 1}`;
+        try {
+            temp = this.universalQuantifierRule(k);
+            if (temp !== false) return `Правило вывода для квантора всеобщности ${temp + 1}`;
+        } catch (e) {
+            error = e;
+        }
+
+        try {
+            temp = this.existentialQuantifierRule(k);
+            if (temp !== false) return `Правило вывода для квантора существования ${temp + 1}`;
+        } catch (e) {
+            error = e;
+        }
+
+        if (error !== undefined) throw error;
         throw new Error(`Не доказано`);
     }
 
@@ -446,13 +479,13 @@ class Checker {
         return false;
     }
 
-    universalQuantifierRule(k) {
+    universalQuantifierRule(k, checkDeduction = false) {
         if (this.trees[k].sign !== "->" || this.trees[k].right.sign !== "@") return false;
         let ancestor = "(" + this.trees[k].left.string + "->" + this.trees[k].right.left.string + ")";
         let leftFreeVariables = this.findFreeVariables(this.trees[k].left);
         let variable = this.trees[k].right.variable;
         if (leftFreeVariables[variable] !== undefined)
-            throw new Error(`Переменная ${variable} входит свободно в формулу ${this.trees[k].right.string}`);
+            throw new Error(`Переменная ${variable} входит свободно в формулу ${this.trees[k].left.string}`);
         if (this.globalExpressionsMap[ancestor] === undefined || this.globalExpressionsMap[ancestor] > k) {
             return false;
         } else {
@@ -460,13 +493,13 @@ class Checker {
         }
     }
 
-    existentialQuantifierRule(k) {
+    existentialQuantifierRule(k, checkDeduction = false) {
         if (this.trees[k].sign !== "->" || this.trees[k].left.sign !== "?") return false;
         let ancestor = "(" + this.trees[k].left.left.string + "->" + this.trees[k].right.string + ")";
         let rightFreeVariables = this.findFreeVariables(this.trees[k].right);
         let variable = this.trees[k].left.variable;
         if (rightFreeVariables[variable] !== undefined)
-            throw new Error(`Переменная ${variable} входит свободно в формулу ${this.trees[k].left.string}`);
+            throw new Error(`Переменная ${variable} входит свободно в формулу ${this.trees[k].right.string}`);
         if (this.globalExpressionsMap[ancestor] === undefined || this.globalExpressionsMap[ancestor] > k) {
             return false;
         } else {
@@ -512,7 +545,7 @@ class Checker {
         let expression = this.trees[k].right;
         let freeVariables = this.findFreeVariables(expression);
         if (freeVariables[variable] === undefined)
-            throw new Error(`переменная ${variable} входит свободно в формулу ${expression.string}`);
+            throw new Error(`переменная ${variable} не входит свободно в формулу ${expression.string}`);
         return !(this.trees[k].left.left.string !== expression.string.replace(new RegExp(variable, 'g'), "0") &&
         this.trees[k].left.right.left.left.string !== expression.string &&
         this.trees[k].left.right.left.right.string !== expression.string.replace(new RegExp(variable, 'g'), variable + "'"));
@@ -673,22 +706,20 @@ class Checker {
 
 }
 
-
-function start() {
-    let parser = new Parser();
-    console.time("Чтение");
-    let strings = fs.readFileSync(inputFile, 'utf8').split("\n");
-    strings = strings.map(x => x.replace(/\s+/g, ""));
+function parseInputFile(strings) {
+    strings = strings.split("\n").map(x => x.replace(/\s+/g, ""));
     let hypothesisStrings = [];
-
     let firstString;
-    let headlineStrings;
     let finalExpression;
+
     if (strings[0].includes("|-")) {
         firstString = strings.shift();
-        headlineStrings = split(firstString);
+        let headlineStrings = split(firstString);
+
+        //checking if there are noo hypothesises or last string is empty
         if (headlineStrings[0] === "") headlineStrings.shift();
         if (strings[strings.length - 1] === "") delete strings.pop();
+
         for (let i = 0; i < (headlineStrings.length - 1); ++i) {
             hypothesisStrings.push(headlineStrings[i]);
         }
@@ -696,51 +727,80 @@ function start() {
     } else {
         throw new Error("Can't parse first string");
     }
+    return [hypothesisStrings, firstString, strings, finalExpression]
+}
+
+function check(strings, mode = "check", checkDeduction = false) {
+    let parser = new Parser();
+    let hypothesisStrings, firstString, finalExpression;
+
+    [hypothesisStrings, firstString, strings, finalExpression] = parseInputFile(strings);
 
     let finalTree = parser.parse(finalExpression);
-
-    console.timeEnd("Чтение");
     console.time("Parsing");
     let checker = new Checker(strings, hypothesisStrings);
-
-    checker.anyDeduction = fs.readFileSync("any.proof", 'utf8');
-    checker.existsDeduction = fs.readFileSync("exists.proof", 'utf8');
-    checker.selfDeduction = fs.readFileSync("self.proof", 'utf8');
-    checker.modusPonensDeduction = fs.readFileSync("modusponens.proof", 'utf8');
-    checker.axiomDeduction = fs.readFileSync("axiom.proof", 'utf8');
-
     console.timeEnd("Parsing");
     let result;
+
+    console.time("проверка");
+    result = firstString + "\n" + checker.checkAll();
+    console.timeEnd("проверка");
+
+    if (finalTree.string !== checker.trees[checker.trees.length - 1].string) {
+        checker.errors.push("Доказано не то, что требовалось")
+    }
+
+    println(`   Количество ошибок: ${checker.errors.length}`);
+    checker.errors.forEach(x => println(x));
+
+    return [result, checker];
+}
+
+
+function start() {
+    let strings = fs.readFileSync(inputFile, 'utf8');
     if (mode === "check") {
-        console.time("проверка");
-        result = firstString + "\n" + checker.checkAll();
-        console.timeEnd("проверка");
-
-        if (finalTree.string !== checker.trees[checker.trees.length - 1].string) {
-            checker.errors.push("Доказано не то, что требовалось")
-        }
-
-        println(`   Количество ошибок: ${checker.errors.length}`);
-        checker.errors.forEach(x => println(x));
+        let result;
+        [result, ] = check(strings);
+        fs.writeFileSync(outputFile, result);
     } else if (mode === "deduction") {
-        console.time("проверка");
-        checker.checkAll();
-        console.timeEnd("проверка");
+        let checker;
+        [ , checker] = check(strings);
 
-        if(checker.errors.length !== 0) {
-            println(`   Во входном файле присутствуют ошибки: ${checker.errors.length}`);
-            checker.errors.forEach(x => println(x));
+        if (checker.errors.length !== 0) {
+            println(`   Во входном файле присутствуют ошибки!`);
         } else {
+            println("Ошибок нет");
+
+            checker.anyDeduction = fs.readFileSync("any.proof", 'utf8');
+            checker.existsDeduction = fs.readFileSync("exists.proof", 'utf8');
+            checker.selfDeduction = fs.readFileSync("self.proof", 'utf8');
+            checker.modusPonensDeduction = fs.readFileSync("modusponens.proof", 'utf8');
+            checker.axiomDeduction = fs.readFileSync("axiom.proof", 'utf8');
+
             console.time("Дедуция");
+            let result;
             result = checker.deduce();
             console.timeEnd("Дедуция");
+
+            // let hypothesisStrings, firstString, finalExpression, deduction_strings;
+            // [hypothesisStrings, firstString, deduction_strings, finalExpression] = parseInputFile(result);
+            // checker = new Checker(deduction_strings, hypothesisStrings);
+            //
+            // console.time("проверка после дедукции");
+            // checker.checkAll();
+            // console.timeEnd("проверка после дедукции");
+            //
+            // println(`   Количество ошибок: ${checker.errors.length}`);
+            // checker.errors.forEach(x => println(x));
+            fs.writeFileSync(outputFile, result);
         }
+    } else {
+        throw new Error("invalid mode");
     }
-    fs.writeFileSync(outputFile, result);
-
-
 }
 
 console.time("Время работы");
 start();
 console.timeEnd("Время работы");
+

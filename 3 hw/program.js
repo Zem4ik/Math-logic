@@ -19,9 +19,9 @@ for (let i = 0; i < count; ++i) {
 }
 
 let proof = firstString.replace(/a/g, formattedNumber) + '\n';
-proof += fs.readFileSync("magicFile.txt") + '\n';
+proof += count + '\n';
 proof += lastStrings[0] ;
 proof += lastStrings[1].replace(/a/g, formattedNumber) + '\n';
 proof += lastStrings[2].replace(/a/g, formattedNumber);
 
-fs.writeFileSync("output.txt", proof);
+fs.writeFileSync("result.txt", proof);
